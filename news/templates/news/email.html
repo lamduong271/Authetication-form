@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <!-- Compiled and minified CSS -->
+
+  </head>
+  <body>
+      <style>
+          .lamduong {
+              background-color: 'pink' !important;
+              padding: 20px
+          }
+      </style>
+    <div class="container">
+      <form action="{% url 'news:send_email' %}" method="post">
+            {% csrf_token %} 
+        {{ form_email }}
+        <br/>
+        <button
+          class="btn waves-effect waves-light"
+          type="submit"
+          name="action"
+        >
+          Submit
+        </button>
+      </form>
+    </div>
+  </body>
+</html>
