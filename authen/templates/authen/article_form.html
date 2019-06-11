@@ -17,28 +17,7 @@
   <body>
     <form class="col s12 container" action="" method="post">
         {% csrf_token %}
-      <div class="row">
-        <div class="input-field col s12">
-          <input
-            placeholder="Placeholder"
-            id="first_name"
-            type="text"
-            class="validate"
-            name="username"
-          />
-          <label for="first_name">Username</label>
-        </div>
-        <div class="input-field col s12">
-          <input
-            placeholder="Placeholder"
-            id="first_name"
-            type="password"
-            class="validate"
-            name="password"
-          />
-          <label for="first_name">Password</label>
-        </div>
-      </div>
+      {{form}}
       <button class="btn waves-effect waves-light" type="submit">
         Submit
       </button>
